@@ -1,0 +1,26 @@
+@import 'variables';
+
+.bg(@path, @addit) { background: url('@{imgPrefix}@{path}') @addit; }
+
+.fontAdd(@name, @path) {
+		@font-face {
+		    font-family: @name;
+		    src: url('@{fontsPrefix}@{path}.eot');
+		    src: url('@{fontsPrefix}@{path}.eot?#iefix') format('embedded-opentype'),
+		         url('@{fontsPrefix}@{path}.woff2') format('woff2'),
+		         url('@{fontsPrefix}@{path}.woff') format('woff'),
+		         url('@{fontsPrefix}@{path}.ttf') format('truetype');
+		    font-weight: normal;
+		    font-style: normal;
+
+		}
+}
+
+.absoluteCenter(){
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	margin: auto;
+}

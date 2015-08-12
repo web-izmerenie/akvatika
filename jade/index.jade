@@ -8,15 +8,16 @@ html(lang="ru")
 		meta(name="description" content="")
 		meta(name="keywords" content="")
 		meta(name="viewport" content="width=device-width, initial-scale=1")
+		link(rel="stylesheet" type="text/css" href="../styles/build/build.css")
 	body
-		wrapper
+		div.wrapper
 			header
-				div.column: img(src="../img/logo.jpg")
-				div.column
+				div#logo: img(src="../img/logo.png")
+				div#header-info
 					p Доставка по Ростову-на-Дону и области
 					a(href="tel:8 (863) 204-26-68") 8 (863) 204-26-68
-				div.column
-					nav.menu
+				nav#menu
+					ul
 						li: a(href="#") Заказать
 						li: a(href="#") Производство
 						li: a(href="#") Контакты
