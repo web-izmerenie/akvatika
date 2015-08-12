@@ -69,5 +69,108 @@ html(lang="ru")
 									li. 
 										Скважина расположена с биосферным заповедником 
 										в Карачаево-Черкесской Республике.
+				section.order
+					h1 Заказать
+					p Наш менеджер свяжется с вами в течение 30 минут
+					form(method="POST")
+						div.column#form-order
+							h1 Доставка
+							input(type="radio" name="city" id="rostov" value="Ростов-на-Дону" checked="checked")
+							label(for="rostov") Ростов-на-Дону
+							input(type="radio" name="city" id="aksai" value="Аксай")
+							label(for="aksai") Аксай
+							input(type="radio" name="city" id="area" value="Область")
+							label(for="area") Область
+							input(type="radio" name="city" id="pickup" value="Самовывоз")
+							label(for="pickup") Самовывоз
+							input(type="text" name="street" class="inline" placeholder="Улица")
+							input(type="text" name="number" class="inline" placeholder="Дом" maxlength="4")
+							input(type="text" name="flat" class="inline" placeholder="Кв." maxlength="4")
+							input(type="text" name="phone" placeholder="Телефон" maxlength="14")
+							a.date(href="#date")
+							textarea(name="msg" placeholder="Дополнительная информация" maxlength="300")
+						div.column#info
+							p Не забудьте спросить у нашего менеджера:
+							ul
+								li Кулер
+								li Помпу
+								li Стаканодержатели
+							ul
+								li Стаканчики
+								li Чехол на бутыль
+							img(src="../img/avto.jpg")
+						div.column#calc
+							ul
+								li
+									div.column
+										img(src="../img/min_boutle1.png")
+										span.
+											Негазированная минеральная
+											природная столовая вода
+										p «Серебряная «Усть-Быстра»
+									div.column
+										span.plus
+										span.minus
+										input(type="text" name="count1" placeholder="0" value="0" maxlength="3")
+										label шт.
+								li
+									div.column
+										img(src="../img/min_boutle2.png")
+										span.
+											Негазированная минеральная
+											природная столовая вода
+										p «Горная Серебряная»
+									div.column
+										span.plus
+										span.minus
+										input(type="text" name="count2" placeholder="0" value="0" maxlength="3")
+										label шт.
+								li
+									div.column
+										img(src="../img/min_boutle3.png")
+										p Ваша тара на обмен
+										span.
+											Поликарбонатная, чистая,
+											без брака
+									div.column
+										span.plus
+										span.minus
+										input(type="text" name="count3" placeholder="0" value="0" maxlength="3")
+										label шт.
+						div.column#price
+							p Сумма Заказа
+							span 240 &#8381;
+						input(type="submit" value="Заказать")
+				section.cert
+					ul
+						li 
+							a(href="../img/cert1.jpg")
+								img(src="../img/cert1.jpg")
+						li 
+							a(href="../img/cert2.jpg")
+								img(src="../img/cert2.jpg")
+						li 
+							a(href="../img/cert3.jpg")
+								img(src="../img/cert3.jpg")
+						li 
+							a(href="../img/cert4.jpg")
+								img(src="../img/cert4.jpg")
+				section.advents
+					h1 Хотите покупать воду дешевле?
+					ul
+						li
+							a(href="#")
+								img(src="../img/hand.png")
+								p Станьте нашим постоянным покупателем
+						li
+							a(href="#")
+								img(src="../img/bottles.png")
+								p Покупайте воду оптом от … бутылей
+						li
+							a(href="#")
+								img(src="../img/car.png")
+								p Заберите воду самостоятельно
+					h2 Узнайте подробности по телефону: +7 (863) 204-26-68
 			footer
-		
+				a(href="http://web-izmerenie.ru") Сделано в 
+					img(src="../img/wi.png")
