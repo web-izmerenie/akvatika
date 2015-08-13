@@ -24,6 +24,7 @@ robots.txt
 smsc
 html
 styles/build
+bower_components
 
 # bitrix tmp dirs
 bitrix/cache

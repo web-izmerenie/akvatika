@@ -1,6 +1,5 @@
 'use strict'
 var gulp = require('gulp');
-var concat = require('gulp-concat');
 var rename = require("gulp-rename");
 var less = require("gulp-less");
 var autoprefixer = require('gulp-autoprefixer');
@@ -13,9 +12,8 @@ gulp.task('clean', function () {
 });
 
 gulp.task('styles', ['clean'], function () {
-	gulp.src('./styles/src/**/*.less')
+	gulp.src('./styles/src/main.less')
 		.pipe(less())
-		.pipe(concat('common.css'))
 		.pipe(autoprefixer('last 5 versions', '> 1%', 'ie 9'))
 		.pipe(rename('build.css'))
 		.pipe(gulp.dest('./styles/build/'));
@@ -27,9 +25,9 @@ gulp.task('jade', function(){
 		.pipe(gulp.dest('./html/'))
 });
 
-gulp.task('watch', function(){
-	gulp.watch('./jade/*.jade', ['jade']);
-	gulp.watch('./styles/src/**/*', ['styles']);
+gulp.task('watch', ['jade','styles'], function(){
+	gulp.watch('./jade/**/*.jade', ['jade']);
+	gulp.watch('./styles/src/**/*.less', ['styles']);
 });
 
 gulp.task('default', ['jade','styles']);
