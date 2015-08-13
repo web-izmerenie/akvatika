@@ -4,6 +4,7 @@
 //fonts
 .fontAdd('pt_sansr', 'ptsansregular-webfont');
 .fontAdd('pt_sansb', 'ptsansbold-webfont');
+.fontAdd('lane-narrow', 'lane_narrow-webfont');
 
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
@@ -71,12 +72,21 @@ html {
 			min-height: 100%;
 			height: auto !important;
 			height: 100%;
-			background: blue;
 
 			@import "./header.less";
 
 			.content {
 				padding: 0 0 100px;
+				margin-top: -101px;
+				h1{
+					font-family: 'pt_sansb';
+					font-size: 33px;
+					color: #000;
+					line-height: 1;
+					text-transform: uppercase;
+					line-height: 43px;
+				}
+				@import "./sections/catalog-slide.less";
 			}//content
 		}//wrapper
 		footer {
