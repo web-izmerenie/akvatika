@@ -5,6 +5,7 @@
 .fontAdd('pt_sansr', 'ptsansregular-webfont');
 .fontAdd('pt_sansb', 'ptsansbold-webfont');
 .fontAdd('lane-narrow', 'lane_narrow-webfont');
+.fontAdd('pt_sansi', 'ptsansitalic-webfont');
 
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
@@ -64,6 +65,14 @@ html {
 			border-spacing: 0;
 		}
 
+		a{
+			color: #000;
+
+			&:hover{
+				text-decoration: none;
+			}
+		}
+
 		.wrapper {
 			max-width: 1200px;
 			min-width: 980px;
@@ -87,6 +96,8 @@ html {
 					line-height: 43px;
 				}
 				@import "./sections/catalog-slide.less";
+
+				@import "./sections/order.less";
 			}//content
 		}//wrapper
 		footer {

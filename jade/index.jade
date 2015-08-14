@@ -9,6 +9,10 @@ html(lang="ru")
 		meta(name="keywords" content="")
 		meta(name="viewport" content="width=device-width, initial-scale=1")
 		link(rel="stylesheet" type="text/css" href="../styles/build/build.css")
+		script(type="text/javascript" src="../bower_components/jquery/dist/jquery.min.js")
+		script(type="text/javascript" src="../bower_components/jquery-form-styler/jquery.formstyler.min.js")
+		script(type="text/javascript" src="../bower_components/jquery-form-styler/jquery.formstyler.min.js")
+		script(type="text/javascript" src="../scripts/main.js")
 	body
 		div.wrapper
 			header
@@ -79,74 +83,80 @@ html(lang="ru")
 					h1 Заказать
 					p Наш менеджер свяжется с вами в течение 30 минут
 					form(method="POST")
-						div.column#form-order
-							h1 Доставка
-							input(type="radio" name="city" id="rostov" value="Ростов-на-Дону" checked="checked")
-							label(for="rostov") Ростов-на-Дону
-							input(type="radio" name="city" id="aksai" value="Аксай")
-							label(for="aksai") Аксай
-							input(type="radio" name="city" id="area" value="Область")
-							label(for="area") Область
-							input(type="radio" name="city" id="pickup" value="Самовывоз")
-							label(for="pickup") Самовывоз
-							input(type="text" name="street" class="inline" placeholder="Улица")
-							input(type="text" name="number" class="inline" placeholder="Дом" maxlength="4")
-							input(type="text" name="flat" class="inline" placeholder="Кв." maxlength="4")
-							input(type="text" name="phone" placeholder="Телефон" maxlength="14")
-							a.date(href="#date")
-							textarea(name="msg" placeholder="Дополнительная информация" maxlength="300")
-						div.column#info
-							p Не забудьте спросить у нашего менеджера:
-							ul
-								li Кулер
-								li Помпу
-								li Стаканодержатели
-							ul
-								li Стаканчики
-								li Чехол на бутыль
-							img(src="../img/avto.jpg")
-						div.column#calc
-							ul
-								li
-									div.column
-										img(src="../img/min_boutle1.png")
-										span.
-											Негазированная минеральная
-											природная столовая вода
-										p «Серебряная «Усть-Быстра»
-									div.column
-										span.plus
-										span.minus
-										input(type="text" name="count1" placeholder="0" value="0" maxlength="3")
-										label шт.
-								li
-									div.column
-										img(src="../img/min_boutle2.png")
-										span.
-											Негазированная минеральная
-											природная столовая вода
-										p «Горная Серебряная»
-									div.column
-										span.plus
-										span.minus
-										input(type="text" name="count2" placeholder="0" value="0" maxlength="3")
-										label шт.
-								li
-									div.column
-										img(src="../img/min_boutle3.png")
-										p Ваша тара на обмен
-										span.
-											Поликарбонатная, чистая,
-											без брака
-									div.column
-										span.plus
-										span.minus
-										input(type="text" name="count3" placeholder="0" value="0" maxlength="3")
-										label шт.
-						div.column#price
-							p Сумма Заказа
-							span 240 &#8381;
-						input(type="submit" value="Заказать")
+						div.row
+							div.column#form-order
+								h1 Доставка
+								div#checkbox
+									input(type="radio" name="city" id="rostov" value="Ростов-на-Дону" checked="checked")
+									label(for="rostov") Ростов-на-Дону
+									input(type="radio" name="city" id="aksai" value="Аксай")
+									label(for="aksai") Аксай
+									input(type="radio" name="city" id="area" value="Область")
+									label(for="area") Область
+									input(type="radio" name="city" id="pickup" value="Самовывоз")
+									label(for="pickup") Самовывоз
+								div.inline
+									input(type="text" name="street" placeholder="Улица")
+									input(type="text" name="number" placeholder="Дом" maxlength="4")
+									input(type="text" name="flat" placeholder="Кв." maxlength="4")
+								div.flex
+									input(type="text" name="phone" placeholder="Телефон" maxlength="15")
+									a.date(href="#date") Укажите дату доставки
+								textarea(name="msg" placeholder="Дополнительная информация" maxlength="300")
+							div.column#info
+								p Не забудьте спросить у нашего менеджера:
+								div.flex
+									ul
+										li Кулер
+										li Помпу
+										li Стаканодержатели
+									ul
+										li Стаканчики
+										li Чехол на бутыль
+								img(src="../img/avto.png")
+						div.row
+							div.column#calc
+								ul
+									li
+										div.column
+											img(src="../img/min_boutle1.png")
+											span.
+												Негазированная минеральная
+												природная столовая вода
+											p «Серебряная «Усть-Быстра»
+										div.column
+											span.plus
+											span.minus
+											input(type="text" name="count1" placeholder="0" value="0" maxlength="3")
+											label шт.
+									li
+										div.column
+											img(src="../img/min_boutle2.png")
+											span.
+												Негазированная минеральная
+												природная столовая вода
+											p «Горная Серебряная»
+										div.column
+											span.plus
+											span.minus
+											input(type="text" name="count2" placeholder="0" value="0" maxlength="3")
+											label шт.
+									li
+										div.column
+											img(src="../img/min_boutle3.png")
+											p Ваша тара на обмен
+											span.
+												Поликарбонатная, чистая,
+												без брака
+										div.column
+											span.plus
+											span.minus
+											input(type="text" name="count3" placeholder="0" value="0" maxlength="3")
+											label шт.
+							div.column#price
+								p Сумма Заказа
+								span 240 &#8381;
+							input(type="submit" value="Заказать")
 				section.cert
 					ul
 						li 
