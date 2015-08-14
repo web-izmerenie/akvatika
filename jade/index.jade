@@ -118,44 +118,47 @@ html(lang="ru")
 							div.column#calc
 								ul
 									li
-										div.column
-											img(src="../img/min_boutle1.png")
+										img(src="../img/min_boutle1.png")
+										div.text
 											span.
 												Негазированная минеральная
 												природная столовая вода
 											p «Серебряная «Усть-Быстра»
-										div.column
-											span.plus
-											span.minus
+										div.count
+											div.manag
+												span.plus +
+												span.minus -
 											input(type="text" name="count1" placeholder="0" value="0" maxlength="3")
 											label шт.
 									li
-										div.column
-											img(src="../img/min_boutle2.png")
+										img(src="../img/min_boutle2.png")
+										div.text
 											span.
 												Негазированная минеральная
 												природная столовая вода
 											p «Горная Серебряная»
-										div.column
-											span.plus
-											span.minus
+										div.count
+											div.manag
+												span.plus +
+												span.minus -
 											input(type="text" name="count2" placeholder="0" value="0" maxlength="3")
 											label шт.
 									li
-										div.column
-											img(src="../img/min_boutle3.png")
+										img(src="../img/min_boutle3.png")
+										div.text
 											p Ваша тара на обмен
 											span.
-												Поликарбонатная, чистая,
+												Поликарбонатная, чистая,#[br]
 												без брака
-										div.column
-											span.plus
-											span.minus
+										div.count
+											div.manag
+												span.plus +
+												span.minus -
 											input(type="text" name="count3" placeholder="0" value="0" maxlength="3")
 											label шт.
 							div.column#price
 								p Сумма Заказа
-								span 240 &#8381;
+								span 240
 							input(type="submit" value="Заказать")
 				section.cert
 					ul

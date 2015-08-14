@@ -73,17 +73,17 @@
 				align-items: center;
 			}
 
+			label{
+				font-family: 'pt_sansr';
+				font-size: 15px;
+			}
+
 			#form-order{
 				h1{
 					text-align: left;
 					font-size: 26px;
 					line-height: 1;
 					margin-bottom: 17px;
-				}
-
-				label{
-					font-family: 'pt_sansr';
-					font-size: 15px;
 				}
 
 				#checkbox{
@@ -195,6 +195,130 @@
 					margin-left: -4px;
 				}
 			}//info
+
+			#calc{
+				margin-left: -5px;
+				width: 64%;
+
+				ul{
+					li{
+						margin-bottom: 22px;
+
+						img, .text, .count{
+							display: inline-block;
+							vertical-align: middle;
+						}
+						img{
+							width: 40px;
+							margin-right: 13px;
+						}
+						.text{
+							width: 235px;
+							font-family: 'pt_sansr';
+							font-size: 12px;
+							text-transform: uppercase;
+							margin-right: 9px;
+
+							p{
+								font-family: 'pt_sansb';
+								font-size: 16px;
+								width: 100%;
+								text-align: left;
+							}
+						}//text
+
+						input[type="text"]{
+							.inputStyle();
+							width: 37px;
+							text-align: right;
+						}
+
+						label{
+							font-size: 16px;
+							margin-left: 10px;
+						}
+						.manag{
+							display: inline-block;
+							vertical-align: middle;
+							margin-right: 9px;
+
+							.plus, .minus{
+								background: #ffcd1e;
+								border-radius: 100%;
+								font-family: 'helvetica-light';
+								.size(18px);
+								display: block;
+								text-align: center;
+								cursor: pointer;
+								margin: 0 auto;
+								font-size: 14px;
+								line-height: 16px;
+							}
+
+							.plus{
+								.size(22px);
+								font-size: 21px;
+								line-height: 18px;
+								margin-bottom: 4px;
+							}
+						}//manag
+					}
+				}
+			}//calc
+
+			#price{
+				position: relative;
+				text-align: center;
+				width: 36%;
+				padding-top: 91px;
+
+				p{
+					font-family: 'pt_sansb';
+					font-size: 20px;
+					text-transform: uppercase;
+					margin-bottom: 10px;
+				}
+				span{
+					@height: 65px;
+
+					display: block;
+					.bg('price.png', no-repeat 0 0);
+					width: 152px;
+					height: @height;
+					margin: 0 auto;
+					font-family: 'helvetica-light';
+					font-size: 40px;
+					line-height: @height;
+					box-sizing: border-box;
+					padding-right: 41px;
+				}
+			}//price
+			input[type="submit"]{
+				@height: 67px;
+
+				background-image: -webkit-gradient(
+				linear,
+				left top,
+				left bottom,
+				color-stop(0, #FFDF76),
+				color-stop(1, #FFC801)
+			);
+			background-image: -o-linear-gradient(bottom, #FFDF76 0%, #FFC801 100%);
+			background-image: -moz-linear-gradient(bottom, #FFDF76 0%, #FFC801 100%);
+			background-image: -webkit-linear-gradient(bottom, #FFDF76 0%, #FFC801 100%);
+			background-image: -ms-linear-gradient(bottom, #FFDF76 0%, #FFC801 100%);
+			background-image: linear-gradient(to bottom, #FFDF76 0%, #FFC801 100%);
+			border: none;
+			cursor: pointer;
+			margin: -3px auto 22px;
+			display: block;
+			width: 214px;
+			height: @height;
+			font-family: 'helvetica-light';
+			font-size: 32px;
+			line-height: @height;
+			text-transform: uppercase;
+			}
 		}//row
 	}//form
 }//order
