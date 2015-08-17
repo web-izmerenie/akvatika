@@ -1,5 +1,6 @@
 //import
 @import "./mixins.less";
+@import "./ajaxContent.less";
 
 //fonts
 .fontAdd('pt_sansr', 'ptsansregular-webfont');
@@ -74,6 +75,15 @@ html {
 			}
 		}
 
+		h1{
+			font-family: 'pt_sansb';
+			font-size: 33px;
+			color: #000;
+			line-height: 1;
+			text-transform: uppercase;
+			line-height: 43px;
+		}
+
 		.wrapper {
 			max-width: 1200px;
 			min-width: 980px;
@@ -88,14 +98,7 @@ html {
 			.content {
 				padding: 0 0 55px;
 				margin-top: -101px;
-				h1{
-					font-family: 'pt_sansb';
-					font-size: 33px;
-					color: #000;
-					line-height: 1;
-					text-transform: uppercase;
-					line-height: 43px;
-				}
+
 				@import "./sections/catalog-slide.less";
 
 				@import "./sections/order.less";

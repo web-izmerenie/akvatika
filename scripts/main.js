@@ -1,7 +1,7 @@
 $(function(){
 
-	function ankorAnimate(){
-		$('a[href^="#"]').click(function(event) {
+	function ankorAnimate(target){
+		$(target).click(function(event) {
 			event.preventDefault();
 			var href=$(this).attr('href');
 			var target=$(href);
@@ -12,7 +12,29 @@ $(function(){
 		});
 	}
 
-	ankorAnimate();
+function loadContent(clickLoad, container) {
+	$(clickLoad).click(function(e){
+		e.preventDefault();
+		var loadContent = $(this).attr('href');
+		var overlay = $('.overlay');
+
+		if(!$(this).hasClass('ankor')){
+			$.ajax({
+				url: loadContent,
+				cache: false,
+				beforeSend: function() { $(container).html('Loading content, please wait...'); },
+				success: function(html) {
+					$(container).hide(); $(container).html(html);
+					$(overlay).show();
+					$(container).fadeIn();
+				}
+			});
+		}
+		});
+	}
+
+	ankorAnimate('.ankor');
+	loadContent('#menu li a', '.module-window');
 
 	//init plugins
 	$('input').styler();
