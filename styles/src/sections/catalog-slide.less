@@ -5,7 +5,6 @@
 	padding-top: 124px;
 	text-align: center;
 	overflow: hidden;
-	width: 980px;
 	margin: 0 auto;
 	p{
 		font-family: 'pt_sansr';
@@ -17,17 +16,17 @@
 	h1{margin-bottom: 15px;}
 
 	ul{
-		width: 1475px;
+		width: 200%;
 		li{
 			float: left;
-			width: 650px;
+			width: 33%;
 
 			&:first-child{
-				padding-right: 175px;
+				padding-right: 8.5%;
 
 				.price{
 					background-position: 19px -2px;
-					right: -5%;
+					right: 0;
 					left: auto;
 				}
 
@@ -36,6 +35,11 @@
 					right: -190px;
 					background-position: 0 -71px;
 					padding: 10px 15px 0px 35px;
+				}
+
+				.row .column .blocks, .row .column .advent-list{
+					float: none;
+					margin-left: 5%;
 				}
 			}
 			.row{
@@ -84,8 +88,9 @@
 							}
 					}
 					.advent-list{
-						margin-left: 11px;
 						width: 290px;
+						float: right;
+						margin-right: 1%;
 
 						li{
 							font-family: 'pt_sansr';
@@ -100,7 +105,9 @@
 					}
 					.blocks{
 						margin-bottom: 51px;
-						margin-left: 10px;
+						float: right;
+						margin-right: 1%;
+
 						li{
 							.bg('catalog-index.png', 0 0 no-repeat);
 							width: 284px;
@@ -110,6 +117,7 @@
 							align-items: center;
 							margin-bottom: 15px;
 							padding-left: 13px;
+							padding-right: 0;
 
 							&:nth-child(2){
 								background-position: 0 -106px;
@@ -138,12 +146,12 @@
 				font-size: 37px;
 				font-weight: 800;
 				padding-right: 20px;
-				top: 29%;
+				top: 28%;
 				position: absolute;
 				display: flex !important;
 				align-items: center;
 				justify-content: center;
-				left: -47px;
+				left: -2%;
 				right: auto;
 			}
 
