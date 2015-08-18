@@ -49,7 +49,8 @@ function loadContent(clickLoad, container) {
 	}
 
 	ankorAnimate('.ankor');
-	loadContent('#menu li a', '.module-window');
+	loadContent('#menu li a', '#menu-window');
+	loadContent('.advents li a', '#advents-window');
 	closeWindow('.overlay', '.module-window');
 
 	//init plugins
