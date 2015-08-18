@@ -12,8 +12,11 @@
 }//overlay
 
 .module-window{
-	.absoluteCenter();
-	top: 50px;
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	height: auto;
+	transform: translate(-50%, -50%);
 	z-index: 2;
 	display: none;
 	width: 885px;
@@ -39,3 +42,8 @@
 		}
 	}//wrap
 }//module-window
+
+.max-height{
+	top: 50px;
+		transform: translate(-50%, 0);
+}

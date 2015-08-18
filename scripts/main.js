@@ -12,11 +12,20 @@ $(function(){
 		});
 	}
 
+	function closeWindow(link, target){
+		$(link).click(function (e) {
+			e.preventDefault();
+			$('.overlay').hide();
+			$(target).fadeOut();
+		})
+	}
+
 function loadContent(clickLoad, container) {
 	$(clickLoad).click(function(e){
 		e.preventDefault();
 		var loadContent = $(this).attr('href');
 		var overlay = $('.overlay');
+		var windowHeight = $(window).height();
 
 		if(!$(this).hasClass('ankor')){
 			$.ajax({
@@ -27,6 +36,12 @@ function loadContent(clickLoad, container) {
 					$(container).hide(); $(container).html(html);
 					$(overlay).show();
 					$(container).fadeIn();
+					var wrapHeaight = $(container).find('.wrap').height();
+					if(wrapHeaight > windowHeight){
+						$(container).addClass('max-height');
+					}else{
+						$(container).removeClass('max-height');
+					}
 				}
 			});
 		}
@@ -35,6 +50,7 @@ function loadContent(clickLoad, container) {
 
 	ankorAnimate('.ankor');
 	loadContent('#menu li a', '.module-window');
+	closeWindow('.overlay', '.module-window');
 
 	//init plugins
 	$('input').styler();
