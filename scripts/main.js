@@ -74,7 +74,7 @@ function loadContent(clickLoad, container) {
 			});
 		}
 		});
-	}
+	}//loadContent
 
 	function order(){
 		var order = $('#form-order');
@@ -129,8 +129,44 @@ function loadContent(clickLoad, container) {
 			$.datepicker.regional["ru"];
 			$(inpDate).show().focus().datepicker('show').hide();
 		});
-	}
+	}//order
 
+	function calculation(){
+			var main = $('#calc');
+			var plus = main.find('.plus');
+			var minus = main.find('.minus');
+			var inp = main.find('input');
+
+			function counts(target, arg){
+				$(target).click(function(){
+					var parent = $(this).closest('.count');
+					var inp = parent.find('input');
+
+					if(arg === '+'){
+						inp.val(parseInt(inp.val()) + 1);
+					}else{
+						if($(inp).val() > 0){
+							inp.val(parseInt(inp.val()) - 1);
+						}
+					}
+				});
+			}//counts
+
+			function inputOnlyNumber(target){
+				$(target).bind("change keyup input click", function(){
+					var onlyNumberReg = /[^0-9:]/g;
+					if(this.value.match(onlyNumberReg)){
+						$(this).val(0);
+					}
+				});
+			}//inputOnlyNumber
+
+			inputOnlyNumber(inp);
+			counts(plus, '+');
+			counts(minus, '-');
+	}//calculation
+
+	calculation();
 	order();
 	ankorAnimate('.ankor');
 	loadContent('#menu li a', '#menu-window');
