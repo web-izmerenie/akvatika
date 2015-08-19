@@ -53,7 +53,8 @@ function loadContent(clickLoad, container) {
 				cache: false,
 				beforeSend: function() { $(container).html('Loading content, please wait...'); },
 				success: function(html) {
-					$(container).hide(); $(container).html(html);
+					$(container).hide();
+					$(container).html(html);
 					$(overlay).show();
 					$(container).fadeIn();
 					var wrapHeaight = $(container).find('.wrap').height();
@@ -66,7 +67,10 @@ function loadContent(clickLoad, container) {
 						$(container).removeClass('max-height');
 						$(container).css('top', '50%');
 					}
-				}
+				},
+				error: function (request, status, error) {
+					alert('Произошла ошибка '+ error +'. Перезагрузите страницу');
+		    }
 			});
 		}
 		});
@@ -114,7 +118,7 @@ function loadContent(clickLoad, container) {
 			switchRadio(idObj);
 		});
 		$(inpDate).datepicker({
-			beforeShowDay: $.datepicker.noWeekends, 
+			beforeShowDay: $.datepicker.noWeekends,
 			onSelect: function(dateText, inst){
 				$(this).val(dateText);
 			}
