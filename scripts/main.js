@@ -26,6 +26,7 @@ function loadContent(clickLoad, container) {
 		var loadContent = $(this).attr('href');
 		var overlay = $('.overlay');
 		var windowHeight = $(window).height();
+		var pos = $(this).offset().top - windowHeight;
 
 		if(!$(this).hasClass('ankor')){
 			$.ajax({
@@ -39,8 +40,12 @@ function loadContent(clickLoad, container) {
 					var wrapHeaight = $(container).find('.wrap').height();
 					if(wrapHeaight > windowHeight){
 						$(container).addClass('max-height');
+						if(pos > 50){
+							$(container).css('top', pos);
+						}
 					}else{
 						$(container).removeClass('max-height');
+						$(container).css('top', '50%');
 					}
 				}
 			});
