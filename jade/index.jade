@@ -10,11 +10,14 @@ html(lang="ru")
 		meta(name="viewport" content="width=device-width, initial-scale=1")
 		link(rel="stylesheet" type="text/css" href="../bower_components/slick-carousel/slick/slick.css")
 		link(rel="stylesheet" type="text/css" href="../bower_components/fancyBox/source/jquery.fancybox.css")
+		link(rel="stylesheet" type="text/css" href="../bower_components/jquery-ui/themes/ui-lightness/jquery-ui.min.css")
 		link(rel="stylesheet" type="text/css" href="../styles/build/build.css")
 		script(type="text/javascript" src="../bower_components/jquery/dist/jquery.min.js")
 		script(type="text/javascript" src="../bower_components/jquery-form-styler/jquery.formstyler.min.js")
 		script(type="text/javascript" src="../bower_components/slick-carousel/slick/slick.min.js")
 		script(type="text/javascript" src="../bower_components/fancyBox/source/jquery.fancybox.pack.js")
+		script(type="text/javascript" src="../bower_components/jquery-ui/jquery-ui.js")
+		script(type="text/javascript" src="../scripts/jquery.ui.datepicker-ru.js")
 		script(type="text/javascript" src="../scripts/main.js")
 	body
 		div.wrapper
@@ -106,6 +109,7 @@ html(lang="ru")
 									div.flex
 										input(type="text" name="phone" placeholder="Телефон" maxlength="15")
 										a.date(href="#date") Укажите дату доставки
+										input(type="text" name="date" value="")
 									textarea(name="msg" placeholder="Дополнительная информация" maxlength="300")
 								div#area-text.blocks
 									p.

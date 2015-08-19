@@ -79,6 +79,8 @@ function loadContent(clickLoad, container) {
 		var areaObj = order.find('#area-text');
 		var pickupObj = order.find('#pickup-text');
 		var checkedObj = order.find('.checked');
+		var inpDate = order.find('input[name="date"]');
+		var linkDate = order.find('.date');
 
 		function switchRadio(elem){
 			switch (elem) {
@@ -110,6 +112,18 @@ function loadContent(clickLoad, container) {
 			$('.blocks').hide();
 
 			switchRadio(idObj);
+		});
+		$(inpDate).datepicker({
+			beforeShowDay: $.datepicker.noWeekends, 
+			onSelect: function(dateText, inst){
+				$(this).val(dateText);
+			}
+		});
+
+		$(linkDate).click(function(e) {
+			e.preventDefault();
+			$.datepicker.regional["ru"];
+			$(inpDate).show().focus().datepicker('show').hide();
 		});
 	}
 
