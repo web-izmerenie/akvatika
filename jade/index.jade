@@ -98,14 +98,24 @@ html(lang="ru")
 									label(for="area") Область
 									input(type="radio" name="city" id="pickup" value="Самовывоз")
 									label(for="pickup") Самовывоз
-								div.inline
-									input(type="text" name="street" placeholder="Улица")
-									input(type="text" name="number" placeholder="Дом" maxlength="4")
-									input(type="text" name="flat" placeholder="Кв." maxlength="4")
-								div.flex
-									input(type="text" name="phone" placeholder="Телефон" maxlength="15")
-									a.date(href="#date") Укажите дату доставки
-								textarea(name="msg" placeholder="Дополнительная информация" maxlength="300")
+								div#adress-form.blocks
+									div.inline
+										input(type="text" name="street" placeholder="Улица")
+										input(type="text" name="number" placeholder="Дом" maxlength="4")
+										input(type="text" name="flat" placeholder="Кв." maxlength="4")
+									div.flex
+										input(type="text" name="phone" placeholder="Телефон" maxlength="15")
+										a.date(href="#date") Укажите дату доставки
+									textarea(name="msg" placeholder="Дополнительная информация" maxlength="300")
+								div#area-text.blocks
+									p.
+										Позвоните пожалуйста по телефону 8 (863) 266-10-04, #[br]
+										чтобы уточнить условия доставки
+								div#pickup-text.blocks
+									p.
+										Вы можете самостоятельно забрать воду по адресу: #[br]
+										г. Ростов-на-Дону, ул. Павленко, 15 лит.  А #[br]
+										(въезд с улицы Мечникова, 35)
 							div.column#info
 								p Не забудьте спросить у нашего менеджера:
 								div.flex
