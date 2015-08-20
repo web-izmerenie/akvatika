@@ -141,7 +141,6 @@ function loadContent(clickLoad, container) {
 				$(target).click(function(){
 					var parent = $(this).closest('.count');
 					var inp = parent.find('input');
-
 					if(arg === '+'){
 						inp.val(parseInt(inp.val()) + 1);
 					}else{
@@ -158,6 +157,9 @@ function loadContent(clickLoad, container) {
 				$(target).bind("change keyup input click", function(){
 					var onlyNumberReg = /[^0-9:]/g;
 					if(this.value.match(onlyNumberReg)){
+						$(this).val(0);
+					}
+					if($(this).val() === '' || $(this).val === NaN){
 						$(this).val(0);
 					}
 				});
