@@ -205,6 +205,52 @@ function loadContent(clickLoad, container) {
 			calcPrice();
 	}//calculation
 
+	function mainSlider(){
+		var main = $('.catalog-slide');
+		var titl = main.find(' > h1');
+		var texts = main.find(' > p');
+		var slide = main.find(' > ul');
+		var items = slide.find(' > li');
+		var birk = items.find('.birk');
+		var price = items.find('.price');
+
+		$(birk).click(function(){
+			var item = $(this).closest('li');
+
+			$(items).removeClass();
+			$(birk).hide();
+			$(price).hide();
+			$(titl).css('opacity', 0);
+			$(texts).css('opacity', 0);
+
+			function triggerClass(){
+				$(birk).fadeIn();
+				$(item).addClass(function(){
+						$(this).addClass('active');
+						var birk = $(this).find('.birk');
+						var price = $(this).find('.price');
+						var newTitl = birk.find('p').text();
+						var newTexts = birk.find('span').text();
+
+						$(titl).text(newTitl).animate({'opacity': 1}, 'fast');
+						$(texts).text(newTexts).animate({'opacity': 1}, 'fast');
+						$(birk).hide();
+						$(price).fadeIn().css('display','flex');
+					}
+				);
+			}
+
+			if($(slide).css('margin-left') == '0px'){
+				$(slide).animate({'margin-left': '-50%'}, 1200,
+					function(){triggerClass();});
+			}else{
+				$(slide).animate({'margin-left': '0'}, 1200,
+					function(){triggerClass();});
+			}
+		});
+	}//mainSlider
+
+	mainSlider();
 	calculation();
 	order();
 	ankorAnimate('.ankor');
