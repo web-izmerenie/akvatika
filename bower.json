@@ -10,6 +10,7 @@
     "jquery-form-styler": "https://github.com/Dimox/jQueryFormStyler.git#~1.7.2",
     "slick-carousel": "https://github.com/kenwheeler/slick.git#~1.5.8",
     "fancyBox": "https://github.com/fancyapps/fancyBox.git#~2.1.5",
-    "jquery-ui": "~1.11.4"
+    "jquery-ui": "~1.11.4",
+    "animate.css": "https://github.com/daneden/animate.css.git#~3.4.0"
   }
 }

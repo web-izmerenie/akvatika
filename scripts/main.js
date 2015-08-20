@@ -214,14 +214,25 @@ function loadContent(clickLoad, container) {
 		var birk = items.find('.birk');
 		var price = items.find('.price');
 
+		function flipAnimate(target, status){
+			if(status === 'show'){
+				$(target).removeClass('flipOutX')
+					.addClass('animated flipInX');
+			}else{
+				$(target).removeClass('flipInX')
+					.addClass('animated flipOutX');
+			}
+		}
+
 		$(birk).click(function(){
 			var item = $(this).closest('li');
 
-			$(items).removeClass();
+			$(price)
+			setTimeout(function(){$(items).removeClass();}, 500);
 			$(birk).hide();
-			$(price).hide();
 			$(titl).css('opacity', 0);
 			$(texts).css('opacity', 0);
+			flipAnimate(price, 'hide');
 
 			function triggerClass(){
 				$(birk).fadeIn();
@@ -235,16 +246,17 @@ function loadContent(clickLoad, container) {
 						$(titl).text(newTitl).animate({'opacity': 1}, 'fast');
 						$(texts).text(newTexts).animate({'opacity': 1}, 'fast');
 						$(birk).hide();
-						$(price).fadeIn().css('display','flex');
+						flipAnimate(price, 'show');
+						$(price).css('display','flex');
 					}
 				);
-			}
+			}//triggerClass
 
 			if($(slide).css('margin-left') == '0px'){
-				$(slide).animate({'margin-left': '-50%'}, 1200,
+				$(slide).animate({'margin-left': '-50%'}, 1000,
 					function(){triggerClass();});
 			}else{
-				$(slide).animate({'margin-left': '0'}, 1200,
+				$(slide).animate({'margin-left': '0'}, 1000,
 					function(){triggerClass();});
 			}
 		});
