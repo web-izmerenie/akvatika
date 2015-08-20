@@ -149,6 +149,8 @@ function loadContent(clickLoad, container) {
 							inp.val(parseInt(inp.val()) - 1);
 						}
 					}
+
+					setTimeout(function(){ calcPrice() }, 800);
 				});
 			}//counts
 
@@ -161,9 +163,44 @@ function loadContent(clickLoad, container) {
 				});
 			}//inputOnlyNumber
 
+			function calcPrice(){
+				var inps = main.find('input[type="text"]');
+				var args = [];
+				var sum = 0;
+				var contain = $('#price span');
+
+				$(inps).each(function(indx, elem){
+					var price = Number($(this).data('price'));
+					var val = Number($(this).val());
+
+					function n1(){
+
+						if(price){
+							var res = price * val;
+							return(res);
+						}else{
+							return 0;
+						}
+					}
+
+					args.push(n1());
+				});
+
+				for(var i = 0; i < args.length; i++){
+					sum = sum + parseInt(args[i]);
+				}
+				$(contain).text(sum);
+			}//calcPrice
+
 			inputOnlyNumber(inp);
 			counts(plus, '+');
 			counts(minus, '-');
+
+			$(inp).on("change keyup input", function(){
+				setTimeout(function(){ calcPrice() }, 800);
+			});
+
+			calcPrice();
 	}//calculation
 
 	calculation();
