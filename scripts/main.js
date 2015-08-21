@@ -32,7 +32,7 @@ $(function(){
 	}
 
 	function closeWindow(link, target){
-		$(link).click(function (e) {
+		$(link).on('click', function (e) {
 			e.preventDefault();
 			$('.overlay').hide();
 			$(target).fadeOut();
@@ -117,6 +117,7 @@ function loadContent(clickLoad, container) {
 
 			switchRadio(idObj);
 		});
+
 		$(inpDate).datepicker({
 			beforeShowDay: $.datepicker.noWeekends,
 			onSelect: function(dateText, inst){
@@ -213,6 +214,7 @@ function loadContent(clickLoad, container) {
 		var items = slide.find(' > li');
 		var birk = items.find('.birk');
 		var price = items.find('.price');
+		var bottle = items.find('img');
 
 		function flipAnimate(target, status){
 			if(status === 'show'){
@@ -224,10 +226,15 @@ function loadContent(clickLoad, container) {
 			}
 		}
 
-		$(birk).click(function(){
+		$(items).each(function(){
+			if(!$(this).hasClass('active')){
+				$(this).find('img').addClass('action');
+			}
+		});
+
+		$(main).on('click', '.birk, .action', function(){
 			var item = $(this).closest('li');
 
-			$(price)
 			setTimeout(function(){$(items).removeClass();}, 500);
 			$(birk).hide();
 			$(titl).css('opacity', 0);
@@ -236,32 +243,73 @@ function loadContent(clickLoad, container) {
 
 			function triggerClass(){
 				$(birk).fadeIn();
+				$(bottle).addClass('action');
+				
 				$(item).addClass(function(){
 						$(this).addClass('active');
 						var birk = $(this).find('.birk');
 						var price = $(this).find('.price');
 						var newTitl = birk.find('p').text();
 						var newTexts = birk.find('span').text();
+						var imgAction = $(this).find('.action');
 
 						$(titl).text(newTitl).animate({'opacity': 1}, 'fast');
 						$(texts).text(newTexts).animate({'opacity': 1}, 'fast');
 						$(birk).hide();
 						flipAnimate(price, 'show');
 						$(price).css('display','flex');
+						$(imgAction).removeClass();
 					}
 				);
 			}//triggerClass
 
 			if($(slide).css('margin-left') == '0px'){
-				$(slide).animate({'margin-left': '-50%'}, 1000,
+				$(slide).animate({'margin-left': '-50%'}, 1000, 'swing',
 					function(){triggerClass();});
 			}else{
-				$(slide).animate({'margin-left': '0'}, 1000,
+				$(slide).animate({'margin-left': '0'}, 1000, 'swing',
 					function(){triggerClass();});
 			}
 		});
 	}//mainSlider
 
+	function validateForm(){
+		$('#order form .require').click(function(){
+			$(this).removeClass('error-input');
+			$('.error').fadeOut(1000).remove();
+		});
+
+		$('#order form').submit(function(event){
+			var error = false;
+			var inputText = $(this).find(".require");
+			var alertWindow = $('#alert-window');
+			var wrap = alertWindow.find('.wrap');
+
+			inputText.each(function(){
+				if($(this).val() === ''){
+					error = true;
+					$(this).addClass('error-input');
+				}
+			});
+
+			$(wrap).find('h1').remove();
+
+			if(error){
+				event.preventDefault();
+				$('.overlay').show();
+				$(wrap).append('<h1>Вы заполнили не все поля.</h1>');
+				$(alertWindow).fadeIn();
+			}else{
+				event.preventDefault();
+				$(wrap).append('<h1>Спасибо за ваш заказ!</h1>');
+				$('.overlay').show();
+				$(alertWindow).fadeIn();
+				$(this).find(".error").remove();
+			}
+		});
+	}
+
+	validateForm();
 	mainSlider();
 	calculation();
 	order();
@@ -269,4 +317,5 @@ function loadContent(clickLoad, container) {
 	loadContent('#menu li a', '#menu-window');
 	loadContent('.advents li a', '#advents-window');
 	closeWindow('.overlay', '.module-window');
+	closeWindow('.close', '.module-window');
 });

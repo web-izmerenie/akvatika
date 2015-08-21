@@ -104,13 +104,13 @@ html(lang="ru")
 									label(for="pickup") Самовывоз
 								div#adress-form.blocks
 									div.inline
-										input(type="text" name="street" placeholder="Улица")
-										input(type="text" name="number" placeholder="Дом" maxlength="4")
-										input(type="text" name="flat" placeholder="Кв." maxlength="4")
+										input(type="text" name="street" placeholder="Улица" class="require")
+										input(type="text" name="number" placeholder="Дом" maxlength="4" class="require")
+										input(type="text" name="flat" placeholder="Кв." maxlength="4" class="require")
 									div.flex
-										input(type="text" name="phone" placeholder="Телефон" maxlength="15")
+										input(type="text" name="phone" placeholder="Телефон" maxlength="15" class="require")
 										a.date(href="#date") Укажите дату доставки
-										input(type="text" name="date" value="")
+										input(type="text" name="date" value="" placeholder="дата")
 									textarea(name="msg" placeholder="Дополнительная информация" maxlength="300")
 								div#area-text.blocks
 									p.
@@ -172,7 +172,7 @@ html(lang="ru")
 											div.manag
 												span.plus +
 												span.minus -
-											input(type="text" name="count3" placeholder="0" value="0" maxlength="2")
+											input(type="text" name="count3" placeholder="0" value="0" maxlength="2" data-price="-50")
 											label шт.
 							div.column#price
 								p Сумма Заказа
@@ -225,3 +225,6 @@ html(lang="ru")
 			div.overlay
 			section.module-window#menu-window
 			section.module-window#advents-window
+			section.module-window#alert-window
+				div.wrap
+					a.close(href="#")
