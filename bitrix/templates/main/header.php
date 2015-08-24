@@ -2,8 +2,10 @@
 if(!defined('B_PROLOG_INCLUDED') || B_PROLOG_INCLUDED !== true)
 	die();
 
-	$tplPath = $APPLICATION->GetTemplatePath();
-	global $tplPath;
+$tplPath = $APPLICATION->GetTemplatePath();
+global $tplPath;
+
+require($_SERVER['DOCUMENT_ROOT'].$tplPath.'/inc/get_constant_tel.php');
 ?>
 <!DOCTYPE html>
 <html lang="ru">
@@ -36,7 +38,8 @@ if(!defined('B_PROLOG_INCLUDED') || B_PROLOG_INCLUDED !== true)
       <header>
         <div id="logo"><img src="<?=$tplPath?>/img/logo.png"></div>
         <div id="header-info">
-          <p>Доставка по Ростову-на-Дону и области</p><a href="tel:8 (863) 204-26-68">8 (863) 204-26-68</a>
+          <p>Доставка по Ростову-на-Дону и области</p>
+					<a href="tel:<?=$TELEPHONE;?>"><?=$TELEPHONE;?></a>
         </div>
 				<?$APPLICATION->IncludeComponent("bitrix:menu", "menu", Array(
 					"COMPONENT_TEMPLATE" => ".default",

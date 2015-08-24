@@ -1,6 +1,7 @@
 <?
 require($_SERVER['DOCUMENT_ROOT'].'/bitrix/header.php');
 $APPLICATION->SetTitle('Главная');
+require($_SERVER['DOCUMENT_ROOT'].$tplPath.'/inc/get_constant_tel.php');
 ?>
 <section class="catalog-slide">
 	<p>Негазированная минеральная природная столовая вода</p>
@@ -190,7 +191,7 @@ $APPLICATION->SetTitle('Главная');
 		<li><a href="../html/advents3.html"><img src="<?=$tplPath?>/img/car.png">
 				<p>Заберите воду самостоятельно</p></a></li>
 	</ul>
-	<h2>Узнайте подробности по телефону: +7 (863) 204-26-68</h2>
+	<h2>Узнайте подробности по телефону: <?=$TELEPHONE;?></h2>
 </section>
 <?
 require($_SERVER['DOCUMENT_ROOT'].'/bitrix/footer.php');
