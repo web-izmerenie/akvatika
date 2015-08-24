@@ -267,10 +267,10 @@ function loadContent(clickLoad, container) {
 			}//triggerClass
 
 			if($(slide).css('margin-left') == '0px'){
-				$(slide).animate({'margin-left': '-50%'}, 1000, 'swing',
+				$(slide).animate({'margin-left': '-50%'}, 1000, 'easeInOutSine',
 					function(){triggerClass();});
 			}else{
-				$(slide).animate({'margin-left': '0'}, 1000, 'swing',
+				$(slide).animate({'margin-left': '0'}, 1000, 'easeInOutSine',
 					function(){triggerClass();});
 			}
 		});
