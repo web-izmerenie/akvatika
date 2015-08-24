@@ -38,12 +38,22 @@ if(!defined('B_PROLOG_INCLUDED') || B_PROLOG_INCLUDED !== true)
         <div id="header-info">
           <p>Доставка по Ростову-на-Дону и области</p><a href="tel:8 (863) 204-26-68">8 (863) 204-26-68</a>
         </div>
-        <nav id="menu">
-          <ul>
-            <li><a href="#order" class="ankor">Заказать</a></li>
-            <li><a href="../html/production.html">Производство</a></li>
-            <li><a href="../html/contacts.html">Контакты</a></li>
-          </ul>
-        </nav>
+				<?$APPLICATION->IncludeComponent("bitrix:menu", "menu", Array(
+					"COMPONENT_TEMPLATE" => ".default",
+						"ROOT_MENU_TYPE" => "top",	// Тип меню для первого уровня
+						"MENU_CACHE_TYPE" => "N",	// Тип кеширования
+						"MENU_CACHE_TIME" => "3600",	// Время кеширования (сек.)
+						"MENU_CACHE_USE_GROUPS" => "Y",	// Учитывать права доступа
+						"MENU_CACHE_GET_VARS" => array(	// Значимые переменные запроса
+							0 => "",
+						),
+						"MAX_LEVEL" => "1",	// Уровень вложенности меню
+						"CHILD_MENU_TYPE" => "left",	// Тип меню для остальных уровней
+						"USE_EXT" => "N",	// Подключать файлы с именами вида .тип_меню.menu_ext.php
+						"DELAY" => "N",	// Откладывать выполнение шаблона меню
+						"ALLOW_MULTI_SELECT" => "N",	// Разрешить несколько активных пунктов одновременно
+					),
+					false
+				);?>
       </header>
       <main class="content">

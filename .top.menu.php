@@ -1,0 +1,25 @@
+<?
+$aMenuLinks = Array(
+	Array(
+		"Заказать", 
+		"#order", 
+		Array(), 
+		Array("class"=>"ankor"), 
+		"" 
+	),
+	Array(
+		"Производство", 
+		"/proizvodstvo.php", 
+		Array(), 
+		Array(), 
+		"" 
+	),
+	Array(
+		"Контакты", 
+		"/kontakty.php", 
+		Array(), 
+		Array(), 
+		"" 
+	)
+);
+?>
