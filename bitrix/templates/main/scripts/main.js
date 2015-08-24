@@ -36,7 +36,7 @@ $(function(){
 			e.preventDefault();
 			$('.overlay').hide();
 			$(target).fadeOut();
-		})
+		});
 	}
 
 function loadContent(clickLoad, container) {
@@ -77,14 +77,15 @@ function loadContent(clickLoad, container) {
 	}//loadContent
 
 	function order(){
-		var order = $('#form-order');
+		var orderForm = $('#form-order');
 		var checkboxes = $('#checkbox .jq-radio');
-		var formObj = order.find('#adress-form');
-		var areaObj = order.find('#area-text');
-		var pickupObj = order.find('#pickup-text');
-		var checkedObj = order.find('.checked');
-		var inpDate = order.find('input[name="date"]');
-		var linkDate = order.find('.date');
+		var formObj = orderForm.find('#adress-form');
+		var areaObj = orderForm.find('#area-text');
+		var pickupObj = orderForm.find('#pickup-text');
+		var checkedObj = orderForm.find('.checked');
+		var inpDate = orderForm.find('input[name="date"]');
+		var linkDate = orderForm.find('.date');
+		var blocks = orderForm.find('.blocks');
 
 		function switchRadio(elem){
 			switch (elem) {
@@ -113,7 +114,7 @@ function loadContent(clickLoad, container) {
 		$(checkboxes).on('click', function(){
 			var idObj = $(this).attr('id');
 
-			$('.blocks').hide();
+			$(blocks).hide();
 
 			switchRadio(idObj);
 		});
@@ -150,7 +151,7 @@ function loadContent(clickLoad, container) {
 						}
 					}
 
-					setTimeout(function(){ calcPrice() }, 800);
+					setTimeout(function(){ calcPrice(); }, 800);
 				});
 			}//counts
 
@@ -160,7 +161,7 @@ function loadContent(clickLoad, container) {
 					if(this.value.match(onlyNumberReg)){
 						$(this).val(0);
 					}
-					if($(this).val() === '' || $(this).val === NaN){
+					if($(this).val() === '' || $(this).is(NaN)){
 						$(this).val(0);
 					}
 				});
@@ -200,7 +201,7 @@ function loadContent(clickLoad, container) {
 			counts(minus, '-');
 
 			$(inp).on("change keyup input", function(){
-				setTimeout(function(){ calcPrice() }, 800);
+				setTimeout(function(){ calcPrice(); }, 800);
 			});
 
 			calcPrice();
@@ -244,7 +245,7 @@ function loadContent(clickLoad, container) {
 			function triggerClass(){
 				$(birk).fadeIn();
 				$(bottle).addClass('action');
-				
+
 				$(item).addClass(function(){
 						$(this).addClass('active');
 						var birk = $(this).find('.birk');
