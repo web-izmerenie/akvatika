@@ -40,5 +40,6 @@ $this->setFrameMode(true);
 	</div>
 	<div id="price" class="column">
 		<p>Сумма Заказа</p><span>0</span>
+		<input type="hidden" name="price" value="0">
 	</div>
 <?}?>

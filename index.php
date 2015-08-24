@@ -68,7 +68,7 @@ require($_SERVER['DOCUMENT_ROOT'].$tplPath.'/inc/get_constant_tel.php');
 <section id="order" class="order">
 	<h1>Заказать</h1>
 	<p>Наш менеджер свяжется с вами в течение 30 минут</p>
-	<form method="POST">
+	<form method="POST" action="./ajax/mail.php">
 		<div class="row">
 			<div id="form-order" class="column">
 				<h1>Доставка</h1>

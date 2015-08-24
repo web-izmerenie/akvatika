@@ -172,6 +172,7 @@ function loadContent(clickLoad, container) {
 				var args = [];
 				var sum = 0;
 				var contain = $('#price span');
+				var inp = main.find('input[name="price"]');
 
 				$(inps).each(function(indx, elem){
 					var price = Number($(this).data('price'));
@@ -193,6 +194,7 @@ function loadContent(clickLoad, container) {
 				for(var i = 0; i < args.length; i++){
 					sum = sum + parseInt(args[i]);
 				}
+
 				$(contain).text(sum);
 			}//calcPrice
 
@@ -287,6 +289,7 @@ function loadContent(clickLoad, container) {
 			var inputText = $(this).find(".require");
 			var alertWindow = $('#alert-window');
 			var wrap = alertWindow.find('.wrap');
+			var inpPrice = $(this).find('input[name="price"]');
 
 			inputText.each(function(){
 				if($(this).val() === ''){
@@ -303,7 +306,7 @@ function loadContent(clickLoad, container) {
 				$(wrap).append('<h1>Вы заполнили не все поля.</h1>');
 				$(alertWindow).fadeIn();
 			}else{
-				event.preventDefault();
+				$(inpPrice).val($('#price span').text());
 				$(wrap).append('<h1>Спасибо за ваш заказ!</h1>');
 				$('.overlay').show();
 				$(alertWindow).fadeIn();
