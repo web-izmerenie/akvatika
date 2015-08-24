@@ -217,6 +217,8 @@ function loadContent(clickLoad, container) {
 		var price = items.find('.price');
 		var bottle = items.find('img');
 
+		$(slide).find('> li:first-child').addClass('active');
+
 		function flipAnimate(target, status){
 			if(status === 'show'){
 				$(target).removeClass('flipOutX')
