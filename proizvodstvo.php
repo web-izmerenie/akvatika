@@ -1,8 +1,1 @@
-<?
-require($_SERVER["DOCUMENT_ROOT"]."/bitrix/header.php");
-$APPLICATION->SetTitle("Производство");
-?>
-
-Text here....
-
-<?require($_SERVER["DOCUMENT_ROOT"]."/bitrix/footer.php");?>
+<?require($_SERVER['DOCUMENT_ROOT'].'/ajax/header_ajax.php');?>
