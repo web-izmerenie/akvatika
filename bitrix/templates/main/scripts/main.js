@@ -290,6 +290,8 @@ function loadContent(clickLoad, container) {
 			var alertWindow = $('#alert-window');
 			var wrap = alertWindow.find('.wrap');
 			var inpPrice = $(this).find('input[name="price"]');
+			var text = $('input[type="text"]');
+			var area = $('textarea');
 
 			inputText.each(function(){
 				if($(this).val() === ''){
@@ -307,13 +309,27 @@ function loadContent(clickLoad, container) {
 				$(alertWindow).fadeIn();
 			}else{
 				$(inpPrice).val($('#price span').text());
-				$(wrap).append('<h1>Спасибо за ваш заказ!</h1>');
-				$('.overlay').show();
-				$(alertWindow).fadeIn();
-				$(this).find(".error").remove();
+				$.ajax({
+					type: "POST",
+					url: $(this).attr('action'),
+					data: $(this).serialize(),
+				  success: function(){
+						$(wrap).append('<h1>Спасибо за ваш заказ!</h1>');
+						$('.overlay').show();
+						$(alertWindow).fadeIn();
+						$(this).find(".error").remove();
+						$('#price span').text('0');
+						$('#order form').trigger('reset');
+          },
+          error: function(){
+              alert('error');
+							event.preventDefault();
+          }
+        });
+				return false;
 			}
 		});
-	}
+	}//validate form
 
 	validateForm();
 	mainSlider();
