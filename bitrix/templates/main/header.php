@@ -5,7 +5,7 @@ if(!defined('B_PROLOG_INCLUDED') || B_PROLOG_INCLUDED !== true)
 $tplPath = $APPLICATION->GetTemplatePath();
 global $tplPath;
 
-require($_SERVER['DOCUMENT_ROOT'].$tplPath.'/inc/get_constant_tel.php');
+require($_SERVER['DOCUMENT_ROOT'].$tplPath.'/inc/get_constant.php');
 ?>
 <!DOCTYPE html>
 <html lang="ru">
