@@ -13,34 +13,9 @@
 $this->setFrameMode(true);
 ?>
 <?if(!empty($arResult['ITEMS'])){?>
-	<?foreach($arResult['ITEMS'] as $arItem){
-		$arPos = explode(",", $arItem['PROPERTIES']['ATT_MAP']['VALUE']);?>
+	<?foreach($arResult['ITEMS'] as $arItem){?>
 		<div class="ajaxContent">
-			<div class="map">
-				<?$APPLICATION->IncludeComponent(
-					"bitrix:map.yandex.view",
-					"",
-					Array(
-					"INIT_MAP_TYPE" => "MAP",
-					"MAP_DATA" => serialize(array(
-					'yandex_lat' => $arPos[0],
-					'yandex_lon' => $arPos[1],
-					'yandex_scale' => 17,
-					'PLACEMARKS' => array (
-					array(
-					'LON' => $arPos[1],
-					'LAT' => $arPos[0],
-					),
-					),
-					)),
-					"MAP_WIDTH" => "100%",
-					"MAP_HEIGHT" => "300",
-					"CONTROLS" => array("ZOOM", "TYPECONTROL", "SCALELINE"),
-					"OPTIONS" => array("DESABLE_SCROLL_ZOOM", "ENABLE_DBLCLICK_ZOOM", "ENABLE_DRAGGING"),
-					"MAP_ID" => ""
-					),
-					false
-					);?>
+			<div id="map" class="map" data-coordinat="<?=$arItem['PROPERTIES']['ATT_MAP']['VALUE']?>">
 			</div>
 			<div class="text">
 				<p><?=$arItem['~PREVIEW_TEXT'];?></p>
