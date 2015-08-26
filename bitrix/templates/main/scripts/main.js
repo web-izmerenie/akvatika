@@ -46,16 +46,20 @@ function loadContent(clickLoad, container) {
 		var overlay = $('.overlay');
 		var windowHeight = $(window).height();
 		var pos = $(this).offset().top - windowHeight;
+		var loading = $('.loading');
 
 		if(!$(this).hasClass('ankor')){
 			$.ajax({
 				url: loadContent,
 				cache: false,
-				beforeSend: function() { $(container).html('Loading content, please wait...'); },
-				success: function(html) {
+				beforeSend: function() {
 					$(container).hide();
-					$(container).html(html);
 					$(overlay).show();
+					$(loading).show();
+				},
+				success: function(html) {
+					$(container).html(html);
+					$(loading).hide();
 					$(container).fadeIn();
 					var wrapHeaight = $(container).find('.wrap').height();
 					if(wrapHeaight > windowHeight){

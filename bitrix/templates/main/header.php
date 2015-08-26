@@ -11,14 +11,9 @@ require($_SERVER['DOCUMENT_ROOT'].$tplPath.'/inc/get_constant.php');
 <html lang="ru">
   <head>
   	<title><?$APPLICATION->ShowTitle()?></title>
-		<?if ($USER->IsAdmin()){$APPLICATION->ShowHead();}?>
-    <meta charset="utf-8">
+		<?$APPLICATION->ShowHead();?>
     <meta name="viewport" content-width="width=device-width">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <?$APPLICATION->ShowMeta("keywords");?>
-		<?$APPLICATION->ShowMeta("description");?>
-    <meta name="keywords" content="">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" href="/bower_components/slick-carousel/slick/slick.css">
     <link rel="stylesheet" type="text/css" href="/bower_components/fancyBox/source/jquery.fancybox.css">
     <link rel="stylesheet" type="text/css" href="/bower_components/jquery-ui/themes/ui-lightness/jquery-ui.min.css">
