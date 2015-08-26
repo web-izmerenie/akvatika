@@ -30,6 +30,8 @@ $(function(){
 		}
 	}
 
-	YandexMap('#map', 17);
 	closeWindow('.close', '.module-window');
+	if($('#map').length) {
+		YandexMap('#map', 17);
+	}
 });

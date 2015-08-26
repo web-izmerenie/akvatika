@@ -81,6 +81,7 @@ function loadContent(clickLoad, container) {
 	}//loadContent
 
 	function order(){
+		var hideCalc = false;
 		var orderForm = $('#form-order');
 		var checkboxes = $('#checkbox .jq-radio');
 		var formObj = orderForm.find('#adress-form');
@@ -90,24 +91,35 @@ function loadContent(clickLoad, container) {
 		var inpDate = orderForm.find('input[name="date"]');
 		var linkDate = orderForm.find('.date');
 		var blocks = orderForm.find('.blocks');
+		var calc = $('#calc-row');
 
 		function switchRadio(elem){
 			switch (elem) {
 				case 'rostov-styler':
 					$(formObj).fadeIn();
+					hideCalc = false;
 					break;
 
 				case 'aksai-styler':
 					$(formObj).fadeIn();
+					hideCalc = false;
 					break;
 
 				case 'area-styler':
 					$(areaObj).fadeIn();
+					hideCalc = true;
 					break;
 
 				case 'pickup-styler':
 					$(pickupObj).fadeIn();
+					hideCalc = true;
 					break;
+			}
+
+			if(hideCalc){
+				$(calc).hide();
+			}else{
+				$(calc).fadeIn();
 			}
 		}
 
@@ -127,6 +139,7 @@ function loadContent(clickLoad, container) {
 			beforeShowDay: $.datepicker.noWeekends,
 			onSelect: function(dateText, inst){
 				$(this).val(dateText);
+				$(linkDate).text(dateText);
 			}
 		});
 

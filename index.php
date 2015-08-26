@@ -95,15 +95,12 @@ require($_SERVER['DOCUMENT_ROOT'].$tplPath.'/inc/get_constant.php');
 					<textarea name="msg" placeholder="Дополнительная информация" maxlength="300"></textarea>
 				</div>
 				<div id="area-text" class="blocks">
-					<p>Позвоните пожалуйста по телефону 8 (863) 266-10-04, <br>
+					<p>Позвоните, пожалуйста, по телефону <?=$TELEPHONE;?>, <br>
 						чтобы уточнить условия доставки
 					</p>
 				</div>
 				<div id="pickup-text" class="blocks">
-					<p>Вы можете самостоятельно забрать воду по адресу: <br>
-						г. Ростов-на-Дону, ул. Павленко, 15 лит.  А <br>
-						(въезд с улицы Мечникова, 35)
-					</p>
+					<p><?=$TEXT_PICKUP?></p>
 				</div>
 			</div>
 			<div id="info" class="column">
@@ -121,7 +118,7 @@ require($_SERVER['DOCUMENT_ROOT'].$tplPath.'/inc/get_constant.php');
 				</div><img src="<?=$tplPath?>/img/avto.png">
 			</div>
 		</div>
-		<div class="row">
+		<div class="row" id="calc-row">
 			<?$APPLICATION->IncludeComponent(
 	"bitrix:news.list",
 	"order",

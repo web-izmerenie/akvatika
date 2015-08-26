@@ -10,3 +10,7 @@
 	$info_advent = CIBlockElement::GetByID(65);
 	if($ar_advent = $info_advent->GetNext())
   	$INFO_ADVENT = $ar_advent['PREVIEW_TEXT'];
+
+	$text = CIBlockElement::GetByID(70);
+	if($ar_text = $text->GetNext())
+  	$TEXT_PICKUP = $ar_text['PREVIEW_TEXT'];
