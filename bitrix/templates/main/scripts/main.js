@@ -296,12 +296,9 @@ function loadContent(clickLoad, container) {
 	}//mainSlider
 
 	function validateForm(){
-		$('#order form .require').click(function(){
+		$('#order form ').on('click', '.require, .error-date', function(){
 			$(this).removeClass('error-input');
 			$('.error').fadeOut(1000).remove();
-		});
-
-		$('.date').click(function(event) {
 			$(this).removeClass('error-date');
 		});
 
