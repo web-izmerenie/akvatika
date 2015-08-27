@@ -301,6 +301,10 @@ function loadContent(clickLoad, container) {
 			$('.error').fadeOut(1000).remove();
 		});
 
+		$('.date').click(function(event) {
+			$(this).removeClass('error-date');
+		});
+
 		$('#order form').submit(function(event){
 			var error = false;
 			var inputText = $(this).find(".require");
@@ -309,6 +313,8 @@ function loadContent(clickLoad, container) {
 			var inpPrice = $(this).find('input[name="price"]');
 			var text = $('input[type="text"]');
 			var area = $('textarea');
+			var inpDate = $(this).find('input[name="date"]');
+			var linkDate = $(this).find('.date');
 
 			inputText.each(function(){
 				if($(this).val() === ''){
@@ -316,6 +322,10 @@ function loadContent(clickLoad, container) {
 					$(this).addClass('error-input');
 				}
 			});
+
+			if($(inpDate).val() === ''){
+				$(linkDate).addClass('error-date');
+			}
 
 			$(wrap).find('h1').remove();
 
