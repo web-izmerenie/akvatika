@@ -1,7 +1,6 @@
 <?
 require($_SERVER['DOCUMENT_ROOT'].'/bitrix/header.php');
 $APPLICATION->SetTitle('Главная');
-require($_SERVER['DOCUMENT_ROOT'].$tplPath.'/inc/get_constant.php');
 ?>
 <?$APPLICATION->IncludeComponent("bitrix:news.list", "main_slider", Array(
 	"COMPONENT_TEMPLATE" => ".default",
@@ -95,9 +94,7 @@ require($_SERVER['DOCUMENT_ROOT'].$tplPath.'/inc/get_constant.php');
 					<textarea name="msg" placeholder="Дополнительная информация" maxlength="300"></textarea>
 				</div>
 				<div id="area-text" class="blocks">
-					<p>Позвоните, пожалуйста, по телефону <?=$TELEPHONE;?>, <br>
-						чтобы уточнить условия доставки
-					</p>
+					<p><?=$TEXT_AREA?></p>
 				</div>
 				<div id="pickup-text" class="blocks">
 					<p><?=$TEXT_PICKUP?></p>
