@@ -31,7 +31,7 @@ $this->setFrameMode(true);
 					<div class="count">
 						<div class="manag"><span class="plus">+</span><span class="minus">-</span></div>
 						<input type="text" name="count<?=$k;?>" placeholder="0" value="0"
-						maxlength="2" data-price="<?=$arItem['PROPERTIES']['ATT_PRICE']['VALUE'];?>">
+						maxlength="2" data-price="<?=$arItem['PROPERTIES']['ATT_PRICE_CALC']['VALUE'];?>">
 						<label>шт.</label>
 					</div>
 				</li>

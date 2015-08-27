@@ -212,7 +212,7 @@ function loadContent(clickLoad, container) {
 					sum = sum + parseInt(args[i]);
 				}
 
-				$(contain).text(sum);
+				if(sum > 0){$(contain).text(sum);}
 			}//calcPrice
 
 			inputOnlyNumber(inp);
@@ -344,6 +344,7 @@ function loadContent(clickLoad, container) {
 						$(this).find(".error").remove();
 						$('#price span').text('0');
 						$('#order form').trigger('reset');
+						$(linkDate).text('Укажите дату доставки');
           },
           error: function(){
               alert('error');
