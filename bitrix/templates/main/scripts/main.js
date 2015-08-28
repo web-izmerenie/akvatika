@@ -65,7 +65,7 @@ function loadContent(clickLoad, container) {
 					if(wrapHeaight > windowHeight){
 						$(container).addClass('max-height');
 						if(pos > 50){
-							$(container).css('top', pos);
+							$(container).css('top', pos - 50);
 						}
 					}else{
 						$(container).removeClass('max-height');
@@ -212,7 +212,10 @@ function loadContent(clickLoad, container) {
 					sum = sum + parseInt(args[i]);
 				}
 
-				if(sum > 0){$(contain).text(sum);}
+				if(sum <= 0){
+					sum = 0;
+				}
+				$(contain).text(sum);
 			}//calcPrice
 
 			inputOnlyNumber(inp);

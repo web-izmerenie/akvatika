@@ -3,7 +3,7 @@
 	width: 625px;
 
 	.wrap{
-		padding: 36px 41px 63px;
+		padding: 36px 41px 40px;
 
 		h1{
 			font-size: 30px;
@@ -15,7 +15,11 @@
 
 		ul{
 			li{
-				margin-bottom: 20px;
+				margin-bottom: 19px;
+
+				&:last-child{
+					margin-bottom: 0 !important; 
+				}
 
 				img{
 					display: inline-block;
@@ -29,22 +33,45 @@
 					vertical-align: middle;
 					width: 425px;
 					font-size: 16px;
-					line-height: 18px;
+					line-height: 22px;
 					font-family: 'pt_sansr';
 
 					h2{
 						font-family: 'pt_sansb';
 						font-size: 18px;
+						line-height: 21px;
 					}
 				}
 
 				b{font-family: 'pt_sansb';}
 
 				.more-text{
-					margin-left: 91px;
-					line-height: 20px;
+					margin-left: 96px;
+					line-height: 21px;
+					margin-top: -3px;
 				}
 			}
 		}
 	}//wrap
+	#advent3{
+		h1{
+			margin: 0px auto 30px;
+		}
+		ul li{
+			margin-bottom: 39px;
+
+			img{margin-right: 14px;}
+
+			.text{margin-top: -15px;}
+
+			.more-text{margin-top: -16px;}
+
+			b{font-size: 16px;}
+
+			i{
+				display: block;
+				margin-top: 25px;
+			}
+		}
+	}
 }//advents-window
