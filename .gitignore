@@ -40,6 +40,7 @@ bitrix/license_key.php
 bitrix/backup
 
 # bitrix system dirs
+bitrix/html_pages/
 bitrix/.access.php
 bitrix/activities
 bitrix/activity_limit.php

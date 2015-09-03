@@ -207,14 +207,14 @@ function loadContent(clickLoad, container) {
 
 					args.push(n1());
 				});
-
 				for(var i = 0; i < args.length; i++){
 					sum = sum + parseInt(args[i]);
 				}
 
-				if(sum <= 0){
-					sum = 0;
+				if(sum < 0){
+					return false;
 				}
+
 				$(contain).text(sum);
 			}//calcPrice
 
@@ -317,6 +317,9 @@ function loadContent(clickLoad, container) {
 			var linkDate = $(this).find('.date');
 
 			inputText.each(function(){
+				if($(this).val().replace(/\s/g,'') == ''){
+				  $(this).val('');
+				}
 				if($(this).val() === ''){
 					error = true;
 					$(this).addClass('error-input');

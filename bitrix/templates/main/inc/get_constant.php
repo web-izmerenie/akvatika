@@ -11,6 +11,8 @@
 	}
 
 $TELEPHONE = getElement(33, 'NAME');
-$INFO_ADVENT = getElement(65, 'PREVIEW_TEXT');
+$INFO_ADVENT1 = getElement(65, 'PREVIEW_TEXT');
 $TEXT_PICKUP = getElement(70, 'PREVIEW_TEXT');
 $TEXT_AREA = getElement(71, 'PREVIEW_TEXT');
+$INFO_ADVENT2 = getElement(78, 'PREVIEW_TEXT');
+$INFO_ADVENT3 = getElement(79, 'PREVIEW_TEXT');

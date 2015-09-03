@@ -18,8 +18,8 @@ require($_SERVER['DOCUMENT_ROOT'].$tplPath.'/inc/get_constant.php');
     <link rel="stylesheet" type="text/css" href="/bower_components/fancyBox/source/jquery.fancybox.css">
     <link rel="stylesheet" type="text/css" href="/bower_components/jquery-ui/themes/ui-lightness/jquery-ui.min.css">
     <link rel="stylesheet" type="text/css" href="/bower_components/animate.css/animate.min.css">
+		<link rel="stylesheet" type="text/css" href="/bower_components/video.js/dist/video-js/video-js.css">
     <link rel="stylesheet" type="text/css" href="<?=$tplPath;?>/styles/build/build.css">
-		<script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
     <script type="text/javascript" src="/bower_components/jquery/dist/jquery.min.js"></script>
     <script type="text/javascript" src="/bower_components/jquery-form-styler/jquery.formstyler.min.js"></script>
     <script type="text/javascript" src="/bower_components/slick-carousel/slick/slick.min.js"></script>
@@ -27,6 +27,7 @@ require($_SERVER['DOCUMENT_ROOT'].$tplPath.'/inc/get_constant.php');
     <script type="text/javascript" src="/bower_components/jquery-ui/jquery-ui.js"></script>
     <script type="text/javascript" src="<?=$tplPath;?>/scripts/jquery.ui.datepicker-ru.js"></script>
     <script type="text/javascript" src="<?=$tplPath;?>/scripts/main.js"></script>
+		<script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
   </head>
   <body>
 		<?$APPLICATION->ShowPanel();?>

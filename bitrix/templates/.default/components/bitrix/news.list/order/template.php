@@ -20,7 +20,7 @@ $this->setFrameMode(true);
 				<li>
 					<img src="<?=$photo['src'];?>">
 					<div class="text">
-						<?if($k === 2){?>
+						<?if($arItem['ID'] == 36){?>
 							<p><?=$arItem['NAME'];?></p>
 							<span><?=$arItem['~PREVIEW_TEXT'];?></span>
 						<?}else{?>
