@@ -3,8 +3,8 @@ require($_SERVER['DOCUMENT_ROOT'].'/bitrix/header.php');
 $APPLICATION->SetTitle("Главная");
 ?>
 <?$APPLICATION->IncludeComponent(
-	"bitrix:news.list", 
-	"main_slider", 
+	"bitrix:news.list",
+	"main_slider",
 	array(
 		"COMPONENT_TEMPLATE" => "main_slider",
 		"IBLOCK_TYPE" => "content",
@@ -95,6 +95,7 @@ $APPLICATION->SetTitle("Главная");
 						<input type="text" name="date" value="" placeholder="дата">
 					</div>
 					<textarea name="msg" placeholder="Дополнительная информация: Ваше имя, желание приобрести кулер, помпу и т. д." maxlength="300"></textarea>
+					<span>Мы не передаём ваши персональные данные третьим лицам — используем их только для целей доставки.</span>
 				</div>
 				<div id="area-text" class="blocks">
 					<p><?=$TEXT_AREA?></p>
