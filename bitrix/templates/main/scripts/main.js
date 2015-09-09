@@ -135,8 +135,12 @@ function loadContent(clickLoad, container) {
 			switchRadio(idObj);
 		});
 
+		function noSunday(date){
+			var day = date.getDay(); return [(day > 0), ''];
+		};
+
 		$(inpDate).datepicker({
-			beforeShowDay: $.datepicker.noWeekends,
+			beforeShowDay: noSunday,
 			onSelect: function(dateText, inst){
 				$(this).val(dateText);
 				$(linkDate).text(dateText);
