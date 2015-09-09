@@ -141,6 +141,7 @@ function loadContent(clickLoad, container) {
 
 		$(inpDate).datepicker({
 			beforeShowDay: noSunday,
+			minDate:"1d",
 			onSelect: function(dateText, inst){
 				$(this).val(dateText);
 				$(linkDate).text(dateText);
@@ -337,6 +338,7 @@ function loadContent(clickLoad, container) {
 
 			if($(inpDate).val() === ''){
 				$(linkDate).addClass('error-date');
+				error = true;
 			}
 
 			$(wrap).find('h1').remove();
