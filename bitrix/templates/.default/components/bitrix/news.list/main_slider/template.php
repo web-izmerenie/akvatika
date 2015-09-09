@@ -14,8 +14,8 @@ $this->setFrameMode(true);
 ?>
 <?if(!empty($arResult['ITEMS'])){?>
 	<section class="catalog-slide">
-		<p><?=$arResult['ITEMS'][0]['PREVIEW_TEXT'];?></p>
-		<h1><?=$arResult['ITEMS'][0]['NAME'];?></h1>
+		<p><?=$arResult['ITEMS'][1]['PREVIEW_TEXT'];?></p>
+		<h1><?=$arResult['ITEMS'][1]['NAME'];?></h1>
 		<ul>
 			<?foreach($arResult['ITEMS'] as $arItem){
 				$photo = CFile::ResizeImageGet($arItem['PREVIEW_PICTURE'], array('width'=>266, 'height'=>524), BX_RESIZE_IMAGE_PROPORTIONAL, true);?>
