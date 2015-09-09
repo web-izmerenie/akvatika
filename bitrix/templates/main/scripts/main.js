@@ -199,6 +199,11 @@ function loadContent(clickLoad, container) {
 					var price = Number($(this).data('price'));
 					var val = Number($(this).val());
 
+					$(this).click(function(event) {
+						if($(this).val() == 0)
+							$(this).val('');
+					});
+
 					function n1(){
 
 						if(price){
