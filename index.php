@@ -87,7 +87,7 @@ $APPLICATION->SetTitle("Главная");
 				<div id="adress-form" class="blocks">
 					<div class="inline">
 						<input type="text" name="street" placeholder="Улица" class="require">
-						<input type="text" name="number" placeholder="Дом" maxlength="4" class="require">
+						<input type="text" name="number" placeholder="Дом" maxlength="7" class="require">
 						<input type="text" name="flat" placeholder="Кв." maxlength="4" class="require">
 					</div>
 					<div class="flex">

@@ -38,9 +38,9 @@ if ($_POST['city'] && $_POST['street'] && $_POST['number'] && $_POST['flat'] && 
 		"TELEPHONE" => $_POST['phone'],
 		"DATE" => $_POST['date'],
 		"MES" => $_POST['msg'],
-		"ITEM0" => $_POST['count0'],
-		"ITEM1" => $_POST['count1'],
-		"ITEM2" => $_POST['count2'],
+		"ITEM0" => $_POST['count34'],
+		"ITEM1" => $_POST['count35'],
+		"ITEM2" => $_POST['count36'],
 		"TOTAL_PRICE" => $_POST['price']
 	);
 	if (CModule::IncludeModule("main")){
