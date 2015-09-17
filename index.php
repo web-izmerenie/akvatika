@@ -254,6 +254,19 @@ $APPLICATION->SetTitle("Главная");
 	false
 );?>
 
+<section class="additional-text">
+	<?$APPLICATION->IncludeComponent(
+		"bitrix:main.include",
+		"",
+		Array(
+			"COMPONENT_TEMPLATE" => ".default",
+			"AREA_FILE_SHOW" => "page",
+			"AREA_FILE_SUFFIX" => "text",
+			"EDIT_TEMPLATE" => ""
+		)
+	);?>
+</section>
+
 <section class="advents">
 	<h1>Хотите покупать воду дешевле?</h1>
 	<ul>

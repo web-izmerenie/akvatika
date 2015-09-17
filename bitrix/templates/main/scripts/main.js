@@ -373,6 +373,19 @@ function loadContent(clickLoad, container) {
 		});
 	}//validate form
 
+	function seo_text(){
+		$('.additional-text').click(function() {
+			if($(this).hasClass('active')){
+				$(this).animate({'height':'150px'}, 500)
+					.removeClass('active');
+			}else{
+				$(this).animate({'height':'100%'}, 500)
+					.addClass('active');
+			}
+		});
+	}
+
+	seo_text();
 	validateForm();
 	mainSlider();
 	calculation();
