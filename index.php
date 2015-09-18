@@ -264,18 +264,18 @@ $APPLICATION->SetTitle("Главная");
 				<p>Заберите воду самостоятельно</p></a></li>
 	</ul>
 	<h2>Узнайте подробности по телефону: <?=$TELEPHONE;?></h2>
-	<section class="additional-text">
-		<?$APPLICATION->IncludeComponent(
-			"bitrix:main.include",
-			"",
-			Array(
-				"COMPONENT_TEMPLATE" => ".default",
-				"AREA_FILE_SHOW" => "page",
-				"AREA_FILE_SUFFIX" => "text",
-				"EDIT_TEMPLATE" => ""
-			)
-		);?>
-	</section>
+</section>
+<section class="additional-text">
+	<?$APPLICATION->IncludeComponent(
+		"bitrix:main.include",
+		"",
+		Array(
+			"COMPONENT_TEMPLATE" => ".default",
+			"AREA_FILE_SHOW" => "page",
+			"AREA_FILE_SUFFIX" => "text",
+			"EDIT_TEMPLATE" => ""
+		)
+	);?>
 </section>
 <?
 require($_SERVER['DOCUMENT_ROOT'].'/bitrix/footer.php');
