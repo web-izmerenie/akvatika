@@ -1,0 +1,34 @@
+@import "../mixins.less";
+
+.additional-text{
+	cursor: pointer;
+	height: 150px;
+	overflow: hidden;
+	position: relative;
+	padding: 0 2%;
+	font-family: pt_sansr;
+	background: #ECE1BC;
+
+	h1, h2{
+		margin: 0;
+		line-height: normal;
+		padding: 0 0 10px;
+		color: #484438;
+		font-family: "pt_sansb";
+		font-size: 24px;
+	}
+
+	h2{font-size: 18px;}
+
+	&:after{
+		content: "";
+		position: absolute;
+		width: 100%;
+		height: 100px;
+		bottom: 0;
+		left: 0;
+		background: linear-gradient(to top, rgba(236, 225, 188, 1) 0%, rgba(236, 225, 188, 0.1) 100%);
+	}
+	}//additional-text
+
+	.active:after{background: none;}
