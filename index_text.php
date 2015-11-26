@@ -1,7 +1,28 @@
-<h1>Заголовок 1</h1>
-<h2>Заголовок 2</h2>
- Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.<br>
- <br>
- Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.<br>
- <br>
- Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.<br>
+<h1>Доставка воды в Ростове-на-Дону</h1>
+<p>
+	 «Серебряная» добывается в заповеднике Усть-Донецкого района. Попробовав воду один раз, ваши сомнения проиграют в битве с намерением купить её и оформить регулярную доставку воды.&nbsp;
+</p>
+<p>
+	 Как доказательство – перечень уникальных преимуществ доставки питьевой воды из природных скважин. Трудно представить, что вы сами отправитесь к источнику, чтобы привезти воду в город. Временные и материальные затраты на такую поездку очевидны. Мы же предлагаем доставку прозрачной, чистой и свежей воды на дом.
+</p>
+<p>
+	 Общепринятая в городах доставка воды по водопроводу и непосредственная доставка воды от источника в Ростов на Дону предполагают предварительную очистку и химический анализ. Далее качество жидкости зависит от способа транспортировки. В отличие от засоренных труб, мы не оставляем шансов вредным примесям и микроорганизмам. Быстрая доставка воды в Ростов гарантирует её отличный вкус и запах. Не лишайте себя удовольствия пить чистую воду.&nbsp;
+</p>
+<p>
+	 Вещества, дезинфицирующие водопроводную воду, делают её мутной. Хлор, обезвреживая, придает приготовленной пище неприятный запах. Осуществляемая нами доставка воды в Ростове гарантирует содержание в природной воде только полезных веществ (ионов кальция, йода и пр.), причем в оптимальных концентрациях.
+</p>
+<p>
+	 Вода, добытая из природного источника, выгодно отличается от фильтрованной. Многие компании обзавелись дешевыми фильтрами. Сотрудники чувствуют себя счастливчиками, не подозревая, что пьют дистиллированную воду, лишенную необходимых микроэлементов. Среди наших услуг – доставка «живой» воды в офис и на дом, и в честь начала долгосрочного сотрудничества мы готовы рассмотреть скидки.&nbsp;
+</p>
+<p>
+	 Позвоните нам +7 (863)&nbsp;204-26-68. Будем рады предложить сервис гарантированной быстрой доставки природной столовой воды «Серебряная».
+</p>
+<p>
+ <a href="/pompa/voda/">Заказать воду</a>
+</p>
+<p>
+ <a href="/pompa/kuler/">Заказать кулер</a>
+</p>
+<p>
+ <a href="/pompa/pompa/">Заказать прочее</a>
+</p>

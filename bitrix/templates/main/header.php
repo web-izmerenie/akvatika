@@ -32,7 +32,7 @@ require($_SERVER['DOCUMENT_ROOT'].$tplPath.'/inc/get_constant.php');
   <body>
 		<?$APPLICATION->ShowPanel();?>
     <div class="wrapper">
-      <header>
+      <!--noindex--><header>
         <div id="logo"><img src="<?=$tplPath?>/img/logo.png"></div>
         <div id="header-info">
           <p>Доставка по Ростову-на-Дону и области</p>
@@ -55,5 +55,5 @@ require($_SERVER['DOCUMENT_ROOT'].$tplPath.'/inc/get_constant.php');
 					),
 					false
 				);?>
-      </header>
+		</header><!--/noindex-->
       <main class="content">

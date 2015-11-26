@@ -1,8 +1,9 @@
 <?
 require($_SERVER['DOCUMENT_ROOT'].'/bitrix/header.php');
-$APPLICATION->SetPageProperty("title", "Акватика");
+$APPLICATION->SetPageProperty("title", "Доставка питьевой бутилированной воды в офис и на дом в Ростове-на-Дону");
 $APPLICATION->SetTitle("Главная");
 ?>
+<!--noindex-->
 <?$APPLICATION->IncludeComponent(
 	"bitrix:news.list",
 	"main_slider",
@@ -265,7 +266,7 @@ $APPLICATION->SetTitle("Главная");
 				<p>Заберите воду самостоятельно</p></a></li>
 	</ul>
 	<h2>Узнайте подробности по телефону: <?=$TELEPHONE;?></h2>
-</section>
+</section><!--/noindex-->
 <section class="additional-text">
 	<?$APPLICATION->IncludeComponent(
 		"bitrix:main.include",
