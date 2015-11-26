@@ -12,11 +12,8 @@ ErrorDocument 404 /404.php
   RewriteEngine On
 
 	RewriteCond %{HTTP_HOST} !^serebryanaya161\.ru$
+	RewriteCond %{HTTP_HOST} !^dev\.serebryanaya161\.ru$
 	RewriteRule ^(.*)$ http://serebryanaya161/$1 [R=301,L]
-
-	RewriteRule ^pompa/voda/$ seo_pages/voda.html [NC,L]
-	RewriteRule ^pompa/kuler/$ seo_pages/kuler.html [NC,L]
-	RewriteRule ^pompa/pompa/$ seo_pages/pompa.html [NC,L]
 
   RewriteCond %{REQUEST_FILENAME} !-f
   RewriteCond %{REQUEST_FILENAME} !-l

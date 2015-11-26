@@ -6,11 +6,12 @@ $tplPath = $APPLICATION->GetTemplatePath();
 global $tplPath;
 
 require($_SERVER['DOCUMENT_ROOT'].$tplPath.'/inc/get_constant.php');
+require($_SERVER['DOCUMENT_ROOT'].$tplPath.'/inc/title_text.php');
 ?>
 <!DOCTYPE html>
 <html lang="ru">
   <head>
-  	<title><?$APPLICATION->ShowTitle()?></title>
+  	<title><?=$title;?></title>
 		<?$APPLICATION->ShowHead();?>
     <meta name="viewport" content-width="width=device-width">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">

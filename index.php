@@ -274,7 +274,7 @@ $APPLICATION->SetTitle("Главная");
 		Array(
 			"COMPONENT_TEMPLATE" => ".default",
 			"AREA_FILE_SHOW" => "page",
-			"AREA_FILE_SUFFIX" => "text",
+			"AREA_FILE_SUFFIX" => $text,
 			"EDIT_TEMPLATE" => ""
 		)
 	);?>
