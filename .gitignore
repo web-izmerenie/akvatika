@@ -35,6 +35,7 @@ bitrix/tmp
 # configs (security)
 dbconfig.php
 bitrix/license_key.php
+index_*.php
 
 # backups
 bitrix/backup
