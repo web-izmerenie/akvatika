@@ -18,7 +18,8 @@ $this->setFrameMode(true);
 		<h1><?=$arResult['ITEMS'][1]['NAME'];?></h1>
 		<ul>
 			<?foreach($arResult['ITEMS'] as $arItem){
-				$photo = CFile::ResizeImageGet($arItem['PREVIEW_PICTURE'], array('width'=>266, 'height'=>524), BX_RESIZE_IMAGE_PROPORTIONAL, true);?>
+				$photo = CFile::ResizeImageGet($arItem['PREVIEW_PICTURE'],
+				array('width'=>266, 'height'=>524), BX_RESIZE_IMAGE_PROPORTIONAL, true);?>
 				<li>
 					<div class="row">
 						<div class="column">
@@ -33,9 +34,10 @@ $this->setFrameMode(true);
 							</ul>
 						</div>
 						<div class="column">
-							<img src="<?=$photo['src'];?>">
+							<img src="<?=$photo['src'];?>" onclick="yaCounter32297939.reachGoal('IMG_<?=$arItem['ID'];?>'); return true;">
 							<span class="price"><span><?=$arItem['PROPERTIES']['ATT_PRICE']['VALUE'];?></span></span>
-							<div class="birk"><span><?=$arItem['PREVIEW_TEXT'];?></span>
+							<div class="birk" onclick="yaCounter32297939.reachGoal('BIRK_<?=$arItem['ID'];?>'); return true;">
+								<span><?=$arItem['PREVIEW_TEXT'];?></span>
 								<p><?=$arItem['NAME'];?></p>
 							</div>
 						</div>

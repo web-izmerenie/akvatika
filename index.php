@@ -88,15 +88,16 @@ $APPLICATION->SetTitle("Главная");
 				</div>
 				<div id="adress-form" class="blocks">
 					<div class="inline">
-						<input type="text" name="street" placeholder="Улица" class="require">
-						<input type="text" name="number" placeholder="Дом" maxlength="7" class="require">
-						<input type="text" name="flat" placeholder="Кв." maxlength="4" class="require">
+						<input type="text" name="street" placeholder="Улица" class="require" onclick="yaCounter32297939.reachGoal('STREET'); return true;">
+						<input type="text" name="number" placeholder="Дом" maxlength="7" class="require" onclick="yaCounter32297939.reachGoal('HOME'); return true;">
+						<input type="text" name="flat" placeholder="Кв." maxlength="4" class="require" onclick="yaCounter32297939.reachGoal('FLAT'); return true;">
 					</div>
 					<div class="flex">
-						<input type="text" name="phone" placeholder="Телефон" maxlength="15" class="require"><a href="#date" class="date">Укажите дату доставки</a>
+						<input type="text" name="phone" placeholder="Телефон" maxlength="15" class="require" onclick="yaCounter32297939.reachGoal('TEL'); return true;">
+						<a href="#date" class="date" onclick="yaCounter32297939.reachGoal('DATE'); return true;">Укажите дату доставки</a>
 						<input type="text" name="date" value="" placeholder="дата">
 					</div>
-					<textarea name="msg" placeholder="Дополнительная информация: Ваше имя, желание приобрести кулер, помпу и т. д." maxlength="300"></textarea>
+					<textarea name="msg" placeholder="Дополнительная информация: Ваше имя, желание приобрести кулер, помпу и т. д." maxlength="300" onclick="yaCounter32297939.reachGoal('MES'); return true;"></textarea>
 					<span>Мы не передаём ваши персональные данные третьим лицам — используем их только для целей доставки.</span>
 				</div>
 				<div id="area-text" class="blocks">
@@ -187,7 +188,7 @@ $APPLICATION->SetTitle("Главная");
 	),
 	false
 );?>
-			<input type="submit" value="Заказать">
+			<input type="submit" value="Заказать" onclick="yaCounter32297939.reachGoal('SUBMIT'); return true;">
 		</div>
 	</form>
 </section>
@@ -258,12 +259,24 @@ $APPLICATION->SetTitle("Главная");
 <section class="advents">
 	<h1>Хотите покупать воду дешевле?</h1>
 	<ul>
-		<li><a href="/stante-nashim-postoyannym-pokupatelem.php"><img src="<?=$tplPath?>/img/hand.png">
-				<p>Станьте нашим постоянным покупателем</p></a></li>
-		<li><a href="/pokupayte-vodu-optom.php"><img src="<?=$tplPath?>/img/bottles.png">
-				<p>Покупайте воду оптом <br> от … бутылей</p></a></li>
-		<li><a href="/zaberite-vodu-samostoyatelno.php"><img src="<?=$tplPath?>/img/car.png">
-				<p>Заберите воду самостоятельно</p></a></li>
+		<li>
+			<a href="/stante-nashim-postoyannym-pokupatelem.php" onclick="yaCounter32297939.reachGoal('CHIP_1'); return true;">
+				<img src="<?=$tplPath?>/img/hand.png">
+				<p>Станьте нашим постоянным покупателем</p>
+			</a>
+		</li>
+		<li>
+			<a href="/pokupayte-vodu-optom.php" onclick="yaCounter32297939.reachGoal('CHIP_2'); return true;">
+				<img src="<?=$tplPath?>/img/bottles.png">
+				<p>Покупайте воду оптом <br> от … бутылей</p>
+			</a>
+		</li>
+		<li>
+			<a href="/zaberite-vodu-samostoyatelno.php" onclick="yaCounter32297939.reachGoal('CHIP_3'); return true;">
+				<img src="<?=$tplPath?>/img/car.png">
+				<p>Заберите воду самостоятельно</p>
+			</a>
+		</li>
 	</ul>
 	<h2>Узнайте подробности по телефону: <?=$TELEPHONE;?></h2>
 </section><!--/noindex-->

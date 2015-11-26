@@ -4,7 +4,7 @@ $aMenuLinks = Array(
 		"Заказать", 
 		"#order", 
 		Array(), 
-		Array("class"=>"ankor"), 
+		Array("class"=>"\"ankor\"", "onclick"=>"\"yaCounter32297939.reachGoal('ORDER'); return true;\""), 
 		"" 
 	),
 	Array(
@@ -18,7 +18,7 @@ $aMenuLinks = Array(
 		"Контакты", 
 		"/kontakty.php", 
 		Array(), 
-		Array(), 
+		Array("onclick"=>"\"yaCounter32297939.reachGoal('CONTACT-LINK'); return true;\""), 
 		"" 
 	)
 );
