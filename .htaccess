@@ -13,7 +13,7 @@ ErrorDocument 404 /404.php
 
 	RewriteCond %{HTTP_HOST} !^serebryanaya161\.ru$
 	RewriteCond %{HTTP_HOST} !^dev\.serebryanaya161\.ru$
-	RewriteRule ^(.*)$ http://serebryanaya161/$1 [R=301,L]
+	RewriteRule ^(.*)$ http://serebryanaya161.ru/$1 [R=301,L]
 
   RewriteCond %{REQUEST_FILENAME} !-f
   RewriteCond %{REQUEST_FILENAME} !-l

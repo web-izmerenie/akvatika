@@ -2,8 +2,7 @@
 require($_SERVER['DOCUMENT_ROOT'].'/bitrix/header.php');
 $APPLICATION->SetPageProperty("title", "Доставка питьевой бутилированной воды в офис и на дом в Ростове-на-Дону");
 $APPLICATION->SetTitle("Главная");
-?>
-<!--noindex-->
+?><!--noindex-->
 <?$APPLICATION->IncludeComponent(
 	"bitrix:news.list",
 	"main_slider",
@@ -97,7 +96,7 @@ $APPLICATION->SetTitle("Главная");
 						<a href="#date" class="date" onclick="yaCounter32297939.reachGoal('DATE'); return true;">Укажите дату доставки</a>
 						<input type="text" name="date" value="" placeholder="дата">
 					</div>
-					<textarea name="msg" placeholder="Дополнительная информация: Ваше имя, желание приобрести кулер, помпу и т. д." maxlength="300" onclick="yaCounter32297939.reachGoal('MES'); return true;"></textarea>
+					<textarea name="msg" placeholder="Дополнительная информация: Ваши имя и фамилия, желание приобрести кулер, помпу и т. д." maxlength="300" onclick="yaCounter32297939.reachGoal('MES'); return true;"></textarea>
 					<span>Мы не передаём ваши персональные данные третьим лицам — используем их только для целей доставки.</span>
 				</div>
 				<div id="area-text" class="blocks">

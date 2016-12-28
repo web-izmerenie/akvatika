@@ -13,7 +13,7 @@ require($_SERVER['DOCUMENT_ROOT'].$tplPath.'/inc/title_text.php');
   <head>
   	<title><?=$title;?></title>
 		<?$APPLICATION->ShowHead();?>
-    <meta name="viewport" content-width="width=device-width">
+    <meta name="viewport" content="320px">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <link rel="stylesheet" type="text/css" href="/bower_components/slick-carousel/slick/slick.css">
     <link rel="stylesheet" type="text/css" href="/bower_components/fancyBox/source/jquery.fancybox.css">

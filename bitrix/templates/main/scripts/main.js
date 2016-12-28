@@ -135,12 +135,22 @@ function loadContent(clickLoad, container) {
 			switchRadio(idObj);
 		});
 
-		function noSunday(date){
-			var day = date.getDay(); return [(day > 0), ''];
-		};
+		var disableddates = ["02-01-2017", "03-01-2017", "07-01-2017"];
+
+		function DisableSpecificDates(date) {
+			var string = jQuery.datepicker.formatDate('dd-mm-yy', date);
+			var day = date.getDay();
+			var disablesArr = [];
+
+			if(disableddates.indexOf(string) == -1 && day != 0) {
+				disablesArr.push(true);
+			}
+
+			return(disablesArr);
+		}
 
 		$(inpDate).datepicker({
-			beforeShowDay: noSunday,
+			beforeShowDay: DisableSpecificDates,
 			minDate:"1d",
 			onSelect: function(dateText, inst){
 				$(this).val(dateText);
